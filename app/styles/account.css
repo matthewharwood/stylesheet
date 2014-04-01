@@ -10,6 +10,17 @@ p.primary {
 p.secondary {
 	font-family: serif;
 }
+
+.red{
+	background: #DD4B39;
+}
+.blue{
+	background: #315EA8;
+}
+.gray{
+	background: #F5F5F5;
+}
+
 h5 {
 	font-family: serif;
 }

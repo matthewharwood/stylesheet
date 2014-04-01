@@ -3,7 +3,7 @@
 angular.module('stylesheetApp')
   .controller('MainCtrl', function ($scope) {
   	//models for main.html page to set button attr
-  	$scope.button = {name: '', color: '', textColor: ''};
+  	$scope.button = {primary: '', secondary: '', tertiary: ''};
     $scope.typography = {primary: 'Primary Type', secondary: 'Secondary Type', tertiary: 'Tertiary Type'};
     $scope.account = {name: 'Account Name2'};
     //sets stylesheet rules to variable

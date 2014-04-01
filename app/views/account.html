@@ -148,7 +148,7 @@
 	 				<h1 class="type-xlg secondary"><inline-edit version="inline-fst-subcaption" model="typography.secondary"></inline-edit></h1>
 	 				</div>
 	 			</div>
-	 			
+
  			</div>
 		</div>
 
@@ -158,27 +158,36 @@
 			<h2 class="type-sm">Colors</h2>
 
 			<ul class="list-unstyled type-xs">
-				<li><button></button></li>
+				<li>
+					<div class="button-style" ng-class="[button.primary]"></div>
+					<p>Primary Color</p>
+				</li>
+				<li>
+					<div class="button-style" ng-class="[button.secondary]"></div>
+					<p>Secondary Color</p>
+				</li>
+				<li>
+					<div class="button-style" ng-class="[button.tertiary]"></div>
+					<p>Tertiary Color</p>
+				</li>
 			</ul>
 
 			</section>
 			<section class="col-xs-12 col-sm-4">
-				<h2 class="type-sm">{{typography.primary}}</h2>
+				<h2 class="type-sm"></h2>
 				<div class="form-group">
-				    <label for="buttonText">Button Text</label>
-				    <input type="text" ng-model="button.name" class="form-control" id="buttonText" placeholder="give me a name">
+				    <label for="buttonText">Primary Color</label>
+				    <input type="text" ng-model="button.primary" class="form-control" id="buttonText" placeholder="give me a name">
+				</div>
+				<div class="form-group">
+				    <label for="buttonText">Primary Color</label>
+				    <input type="text" ng-model="button.secondary" class="form-control" id="buttonText" placeholder="give me a name">
+				</div>
+				<div class="form-group">
+				    <label for="buttonText">Primary Color</label>
+				    <input type="text" ng-model="button.tertiary" class="form-control" id="buttonText" placeholder="give me a name">
 				</div>
 
-				<div class="form-group">
-				    <label for="buttonColor">Background Color</label>
-				    <input type="text" ng-model="button.color" class="form-control" id="buttonColor" placeholder="give me a bg">
-				</div>
-
-				<div class="form-group">
-				    <label  for="buttonTextColor">Text Color</label>
-				    <input type="text" ng-model="button.textColor" class="form-control" id="buttonTextColor" placeholder="give me a color">
-				</div>
-	
 
 			</section>
 		</div>
