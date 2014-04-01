@@ -1,11 +1,24 @@
+h1.primary {
+	font-family: serif;
+}
+h1.secondary {
+	font-family: serif;
+}
+p.primary {
+	font-family: serif;
+}
+p.secondary {
+	font-family: serif;
+}
+h5 {
+	font-family: serif;
+}
+h6 {
+	font-family: serif;
+}
 
-.type-helvetica3{
-    font-family: 'Helvetica Neue';
-    font-weight: 300;
+
+.primary-font {
+	font-family: serif;
 }
-.wtf{
-    background-color: red;
-}
-.omg{
-    font-size: 25px;
-}
+

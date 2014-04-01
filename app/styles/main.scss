@@ -3,4 +3,119 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'mods/_demo.scss';
 
+$default-font:    Helvetica, sans-serif;
+$account-font:    'Roboto', sans-serif;
+$default-color: #333;
+.type-xs {
+	font-size: 10px;
+}
+.type-sm {
+	font-size: 14px;
+	&.para {
+		font-size: 11px;
+		font-weight: bold;
+	}
+}
+.type-xlg {
+	font-size: 62px;
+	font-weight: bold;
+	line-height: .85;
+	margin-left: 15px;
+}
 
+.type-md {
+	font-size: 24px;
+	text-transform: capitalize;
+	line-height: .75;
+}
+.italic-bold {font-style: italic; font-weight: 900;}
+.italic-med { font-style: italic; font-weight: 700;}
+.italic-reg{ font-style: italic; font-weight: 500;}
+.italic-light { font-style: italic;  font-weight: 400;}
+.italic-extrathin { font-style: italic; font-weight: 300;}
+.italic-ultrathin { font-style: italic; font-weight: 100;}
+.height-sm {
+	min-height: 160px;
+}
+h2, h1 {
+	text-transform: uppercase;
+}
+.style-title {
+	padding: 36px 0 36px 0;
+	margin-left: 15px;
+	position: relative;
+	h1{
+		font-weight: bold;
+		line-height: .95;
+	}
+	&:after {	
+		position: absolute;
+		top: 26px;
+		left: 0;
+		content: "TYPOGRAPHY";
+		font-size: 9px;
+		color: #333;
+		font-weight: bold;
+	}
+}
+.side-navigation {
+	transform: translateX(100%);
+	width: 480px;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	position: fixed;
+	top:0;
+	bottom:0;
+	height:100%;
+	right:0;
+	padding: 0 50px 50px 50px;
+	background-color: rgba(52,52,52,.97);
+
+	color: #fff;
+	overflow-y: auto;
+	z-index: 2;
+	.close-btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 10px 24px;
+		cursor: pointer;
+		text-align: center;
+		vertical-align: middle;
+		&:hover {
+			background-color: rgba(52,52,52,1);
+		}
+		p {
+			margin-top: 10px;
+		}
+
+	}
+	ul {
+		color: #fff;
+		font-size: 14px;
+		margin: 0;
+		h1 {
+			font-family: 'Share Tech Mono';
+			font-size: 16px;
+			letter-spacing: 6px;
+		}
+	}
+	&.open {
+		transform: translateX(0%);
+	}
+}
+.spacer {
+	position: relative;
+	min-height: 380px;
+	&:after {	
+		position: absolute;
+		top: 0;
+		left: 15px;
+		right: 15px;
+		height: 1px;
+		width: 100%;
+		content: " ";
+		color: $default-color;
+		background-color: $default-color;
+	}
+}
