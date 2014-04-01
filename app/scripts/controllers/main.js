@@ -4,13 +4,19 @@ angular.module('stylesheetApp')
   .controller('MainCtrl', function ($scope) {
   	//models for main.html page to set button attr
   	$scope.button = {name: '', color: '', textColor: ''};
-    $scope.typography = {style: '', color: '', textColor: ''};
-
+    $scope.typography = {primary: 'Primary Type', secondary: 'Secondary Type', tertiary: 'Tertiary Type'};
+    $scope.account = {name: 'Account Name2'};
     //sets stylesheet rules to variable
-    var styles = document.styleSheets[1].rules;
-    $scope.styles = document.styleSheets[1].rules;
+    var styles = document.styleSheets[6].rules;
+    $scope.styles = document.styleSheets[6].rules;
     $scope.styleVal = [];
     $scope.styleValSplit = [];
+    $scope.menu_on = false;
+    //console.log($scope.menu_on);
+    $scope.toggleMenu = function() {
+        $scope.menu_on = !$scope.menu_on;
+        console.log($scope.menu_on);
+    }
 
     //loops through the style rules and pushes them to an array
     for(var x=0;x < $scope.styles.length; x++) {
@@ -73,7 +79,7 @@ angular.module('stylesheetApp')
             styles: '='
         },
         restrict: 'EA',
-        template: '<div ng-repeat="(key, type) in types">{{key}}-{{type}} <input ng-change="Change(type)" ng-model="temp_styles[type]"/></div>',
+        template: '<div ng-repeat="type in types"><input ng-change="Change(type)" ng-model="temp_styles[type]" class="form-control"/></div>',
         link: function(scope, elt, attrs) {      
             // get the actual styles
             var keys = scope.styles.cssText;

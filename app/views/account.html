@@ -1,9 +1,9 @@
 
-
-<div ng-repeat="pos in finalPositions">
+<!-- {{finalPositions}} -->
+<!-- <div ng-repeat="pos in finalPositions">
 	<div styler styles="styles[pos]"></div>
 </div>
-<!-- {{finalPositions}} -->
+
 <h1 class="wtf omg" ng-click="evalClasses($event)" ng-class="[typography.style]"> Client - Target</h1>
 <h1 class="wtf" ng-click="evalClasses($event)" ng-class="[typography.style]"> Client - Target</h1>
 
@@ -13,4 +13,174 @@
 	    <input type="text" ng-model="typography.style" class="form-control" placeholder="Give Style">
 	</div>
 </div>
+ -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href=""><inline-edit version="inline-fst-subcaption" model="account.name"></inline-edit></a>
 
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      		<li ng-click="toggleMenu()" ><a  href=""><span class="glyphicon glyphicon-edit"> </span> edit</a></li>
+			<li><a href=""><span class="glyphicon glyphicon-download-alt"> </span> export</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="side-navigation" ng-class="{'open': menu_on}">
+	<h1>Editing Pane</h1>
+	<hr>
+
+	<div ng-click="toggleMenu()" class="close-btn"><p><span class="glyphicon glyphicon-remove"> </span> close</p></div>
+	<ul class="list-unstyled">
+	<li>
+		<h1>Heading Primary</h1>
+		<div styler styles="styles[0]"></div>
+	</li>
+	<li>
+		<h1>Heading Secondary</h1>
+		<div styler styles="styles[1]"></div>
+	</li>
+	<li>
+		<h1>Paragraph Primary</h1>
+		<div styler styles="styles[2]"></div>
+	</li>
+	<li>
+		<h1>Paragraph Secondary</h1>
+		<div styler styles="styles[3]"></div>
+	</li>
+	</ul>
+</div>
+ <div class="container account-styles">
+ 	<div class="row">
+ 		 	<div class="col-xs-12 style-title">
+ 				<h1 >BRAND <br> FONTS</h1>
+ 			</div>
+
+ 	</div>
+ 	<div class="row">
+ 		<div class="col-xs-12 col-md-6">
+ 			<div class="row spacer">
+	 			<section class="col-xs-12 col-sm-8">
+	 				<h2 class="type-sm">primary brand font</h2>
+					<p class="type-sm para primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, ut, adipisci magnam unde soluta id quaerat nesciunt asperiores quisquam amet nihil blanditiis rem sequi dolorem dignissimos animi quasi fugit quo.</p>
+
+
+	 			</section>
+	 			<section class="col-xs-12 col-sm-4">
+	 				<h2 class="type-sm">uses</h2>
+					<ul class="list-unstyled type-xs">
+						<li>Overall brand communications</li>
+						<li>Packaging</li>
+						<li>Retail Signage</li>
+						<li>Website/Social</li>
+						<li>Internal Presentations</li>
+						<li>Brand Communications</li>
+						<li>Visual Center</li>
+					</ul>
+		
+	 			</section>
+ 		
+	 			<div class="row">
+	 				<div class="col-sm-8">
+	 				<h1 class="type-xlg primary"><inline-edit version="inline-fst-subcaption" model="typography.primary"></inline-edit></h1>
+	 				</div>
+	 			</div>
+ 			</div>
+ 			<!-- typography display -->
+ 			<div class="row spacer">
+	 			<section class="col-xs-12 col-sm-8">
+	 				<h2 class="type-sm">primary brand font</h2>
+					<h1 class="type-md italic-bold para primary">{{typography.primary}} Bold &amp; Italic</h1>
+					<h1 class="type-md italic-med para primary">{{typography.primary}} Medium &amp; Italic</h1>
+					<h1 class="type-md italic-reg para primary">{{typography.primary}}  Regular &amp; Italic</h1>
+					<h1 class="type-md italic-light para primary">{{typography.primary}}  Light &amp; Italic</h1>
+					<h1 class="type-md italic-extrathin para primary">{{typography.primary}}  Extra Thin &amp; Italic</h1>
+					<h1 class="type-md italic-ultrathin para primary">{{typography.primary}}  Ultra Thin &amp; Italic</h1>
+
+	 			</section>
+	 			<section class="col-xs-12 col-sm-4">
+	 				<h2 class="type-sm">{{typography.primary}}</h2>
+					<ul class="list-unstyled type-xs">
+						<li>Jordan NHG Display should only be used when copy is above 24pts</li>
+					</ul>
+		
+	 			</section>
+ 			</div>
+ 			<!-- /.typographical display -->
+ 		</div>
+ 		<!-- /.left-col -->
+
+		<div class="col-xs-12 col-md-5 col-md-offset-1">
+			<div class="row spacer">
+	 			<section class="col-xs-12 col-sm-8 height-sm">
+	 				<h2 class="type-sm">secondary headline font</h2>
+					<p class="type-sm para secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, ut, adipisci magnam unde soluta id quaerat nesciunt asperiores quisquam amet nihil blanditiis rem sequi dolorem dignissimos animi quasi fugit quo.</p>
+
+
+	 			</section>
+	 			<section class="col-xs-12 col-sm-4 height-sm">
+	 				<h2 class="type-sm">uses</h2>
+					<ul class="list-unstyled type-xs">
+						<li>Visual center headlines</li>
+						<li>Event branding</li>
+						<li>Pop-ups</li>
+					</ul>
+		
+	 			</section>
+ 			
+	 			<div class="row">
+	 				<div class="col-sm-8">
+	 				<h1 class="type-xlg secondary"><inline-edit version="inline-fst-subcaption" model="typography.secondary"></inline-edit></h1>
+	 				</div>
+	 			</div>
+	 			
+ 			</div>
+		</div>
+
+	</div>
+	<div class="row spacer">
+			<section class="col-xs-12 col-sm-8">
+			<h2 class="type-sm">Colors</h2>
+
+			<ul class="list-unstyled type-xs">
+				<li><button></button></li>
+			</ul>
+
+			</section>
+			<section class="col-xs-12 col-sm-4">
+				<h2 class="type-sm">{{typography.primary}}</h2>
+				<div class="form-group">
+				    <label for="buttonText">Button Text</label>
+				    <input type="text" ng-model="button.name" class="form-control" id="buttonText" placeholder="give me a name">
+				</div>
+
+				<div class="form-group">
+				    <label for="buttonColor">Background Color</label>
+				    <input type="text" ng-model="button.color" class="form-control" id="buttonColor" placeholder="give me a bg">
+				</div>
+
+				<div class="form-group">
+				    <label  for="buttonTextColor">Text Color</label>
+				    <input type="text" ng-model="button.textColor" class="form-control" id="buttonTextColor" placeholder="give me a color">
+				</div>
+	
+
+			</section>
+		</div>
+	<!--/.master row-->
+ </div>
