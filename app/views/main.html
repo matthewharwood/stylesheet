@@ -1,3 +1,326 @@
+
+
+
+
+<div class="container">
+
+<!-- Intro to Angular -->
+
+<div class="section">
+	<div class="logo">
+		<img class="logo" src="/images/AngularJS.png" />
+	</div>
+	<p>AngularJS is a javascript framework that was made for creating dynamic views in web applications. It is built with a MVW(Model-View-Whatever) pattern framework so MVC, MVVM, MVP can all be applied depending on whatever is needed.</p>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Data Binding -->
+<div class="section">
+	<h1>Data Binding</h1>
+	<p>One of the most powerful features of Angular is the data binding functionality. This handles most of the low-level details of creating 2-way bindings between view elements and model variables.</p>
+
+	
+	<h3>Model-view linking</h3>
+	<!-- Data bound input field BOUND to variable: 'textfield1' -->
+	<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+
+
+	<!-- {{ curly braces/mustache variables }} render out the variable value -->
+	{{textfield1}}
+
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Controllers -->
+<div class="section">
+	<h1>Controllers</h1>
+	<p>Controllers create local isolated scopes of variables and functionality. </p>
+
+	<h2>Isolated scopes</h2>
+	<div ng-controller="DemoCtrl">
+		<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+
+	<div ng-controller="DemoCtrl">
+		<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+
+	<div ng-controller="DemoCtrl">
+		<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Controllers -->
+<div class="section">
+	<h1>Controllers</h1>
+	<p>Any JS functionality and behaviors can be defined in controllers so that functions can only be accessed by objects within the scope.</p>
+
+	<h2>Isolated scope functionality</h2>
+	<div ng-controller="DemoCtrl">
+		<input class="inputfield" ng-model="textfield1" placeholder="Type text in here" style="color:{{textfield1}}"></input>
+
+		<h4>Normal text</h4>
+		{{textfield1}}
+
+		<h4>Reversed text</h4>
+		{{reversedMessage(textfield1)}}
+	</div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Directives -->
+<div class="section">
+	<h1>Dependency Injection</h1>
+	<p>DI is a software design pattern that allows the passing of a dependency / service to an object. This allows for a loosely coupled system where this service (or dependencies) is defined independently. This means that the class using the dependency has no knowledge of the internals of the service being called.</p>
+
+	<h2>Decoupling and the separation of the behaviour from the data.</h2>
+
+	<div ng-controller="DemoCtrl">
+		<input class="inputfield" ng-model="textfield1" placeholder="Type text in here" style="color:{{textfield1}}"></input>
+
+		<h4>Normal text</h4>
+		{{textfield1}}
+
+		<h4>Reversed text</h4>
+		{{	textfield1 | reverse}}
+	</div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Directives -->
+<div class="section">
+	<h1>Directives</h1>
+	<p>This is a powerful abstract that defines both behavior and defines how the HTML code is structured.</p>
+
+	<h2>Built-in directive: ng-repeat</h2>
+	<h2>Manually coded</h2>
+	<div ng-controller="DemoCtrl">
+		1<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+
+	<div ng-controller="DemoCtrl">
+		2<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+
+	<div ng-controller="DemoCtrl">
+		3<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+		{{textfield1}}
+	</div>
+
+
+	<!-- NG-REPEAT -->
+	<h2>ng-repeat</h2>
+
+	<div ng-controller="DemoCtrl">
+		<div ng-repeat="i in range">
+			{{$index}}<input class="inputfield" ng-model="textfield1" placeholder="Type text in here"></input>
+			{{textfield1}}
+		</div>
+	</div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Directives -->
+<div class="section">
+	<h1>Directives</h1>
+	<p>It can be used to create custom HTML syntax that allows for modularization of code into subdefinitions.</p>
+
+	<h2>Custom-directive</h2>
+	<div ng-controller="DemoCtrl">
+		<div>
+			Select a state
+			<select>
+				<option>Alabama</option>
+				<option>Alaska</option>
+				<option>Arizona</option>
+				<option>Arkansas</option>
+				<option>California</option>
+				<option>Colorado</option>
+				<option>Connecticut</option>
+				<option>Delaware</option>
+				<option>Florida</option>
+				<option>Georgia</option>
+				<option>Hawaii</option>
+				<option>Idaho</option>
+				<option>Illinois</option>
+				<option>Indiana</option>
+				<option>Iowa</option>
+				<option>Kansas</option>
+				<option>Kentucky</option>
+				<option>Louisiana</option>
+				<option>Maine</option>
+				<option>Maryland</option>
+				<option>Massachusetts</option>
+				<option>Michigan</option>
+				<option>Minnesota</option>
+				<option>Mississippi</option>
+				<option>Missouri</option>
+				<option>Montana</option>
+				<option>Nebraska</option>
+				<option>Nevada</option>
+				<option>New Hampshire</option>
+				<option>New Jersey</option>
+				<option>New Mexico</option>
+				<option>New York</option>
+				<option>North Carolina</option>
+				<option>North Dakota</option>
+				<option>Ohio</option>
+				<option>Oklahoma</option>
+				<option>Oregon</option>
+				<option>Pennsylvania</option>
+				<option>Rhode Island</option>
+				<option>South Carolina</option>
+				<option>South Dakota</option>
+				<option>Tennessee</option>
+				<option>Texas</option>
+				<option>Utah</option>
+				<option>Vermont</option>
+				<option>Virginia</option>
+				<option>Washington</option>
+				<option>West Virginia</option>
+				<option>Wisconsin</option>
+				<option>Wyoming</option>
+			</select>
+		</div>
+
+
+		<!-- Template Directive -->
+		<div>
+			Select a state
+				<states></states>
+		</div>
+	</div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Wrap Up -->
+<div class="section">
+	<h1>AngularJS Summary</h1>
+	
+
+	<h3>Modularization</h3>
+	<h3>Code re-use</h3>
+	<h3>Control/Data abstraction</h3>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <div class="well">
 	<h2>Models to Classes</h2>
 	<hr>
@@ -22,4 +345,7 @@
 <hr>
 
 </div>
+-->
+</div>
+
 
